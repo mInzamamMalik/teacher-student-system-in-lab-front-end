@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+
+    <script src="bower_components/angular/angular.js"></script>
+
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+
+    <script src="app.js"></script>
+    <script src="views/home/home.js"></script>
+    <script src="views/login/login.js"></script>
+    <script src="views/studentLogin/studentLogin.js"></script>
+    <script src="views/adminDashBoard/adminDashBoard.js"></script>
+    <script src="views/studentDashBoard/studentDashBoard.js"></script>
+
+
+</head>
+<body ng-app="myApp" ng-controoler="appController">
+
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <!--<md-button aria-label="Go Back">
+            Go Back
+        </md-button>-->
+        <h2>
+            <span>Toolbar with Standard Buttons</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-button md-primary " ui-sref="home">home</md-button>
+        <md-button class="md-button md-primary " ui-sref="adminDashBoard">adminDashBoard</md-button>
+        <md-button class="md-button md-primary " ui-sref="studentDashBoard">studentDashBoard</md-button>
+        <md-button class="md-fab md-mini" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+
+<br />
+
+<ui-view></ui-view>
+
+</body>
+</html>
