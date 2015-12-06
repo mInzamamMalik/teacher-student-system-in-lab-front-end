@@ -26,17 +26,16 @@ angular.module("myApp")
 
                         $state.go("studentDashBoard");
 
-                    } else if (a.adminStatus == undefined) {
-                        console.log("unable to sign in");
-                        $scope.loginErrorMessage = true;
+                    } else {
+
+                        $scope.loginErrorMessage = a.status;
 
                         setTimeout(function () {
                             $scope.loginErrorMessage = false;
                         }, 3000)
                     }
 
-                }
-            );
+                });
 
             /* $http.post("http://localhost:3000/login",{n : "dfgfd"},{})
              .then(function(a) {

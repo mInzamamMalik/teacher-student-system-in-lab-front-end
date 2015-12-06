@@ -16,11 +16,6 @@ angular.module("myApp",["ngMaterial","ui.router"])
                templateUrl : "views/login/login.html",
                controller : "loginController"
            })
-            .state("studentLogin",{
-               url : "/studentLogin",
-               templateUrl : "views/studentLogin/studentLogin.html",
-               controller : "studentLoginController"
-           })
 
            .state("adminDashBoard",{
                url : "/adminDashBoard",

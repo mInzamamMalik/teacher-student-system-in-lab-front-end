@@ -1,18 +1,20 @@
-
-<span class="md-display-3">Admin Login:</span>
+<div class="md-display-3 md-padding">Login:</div>
 
 <form ng-submit="login();">
 
-<md-content layout-padding  layout-sm="column">
-    <md-input-container flex="40">
+    <md-content md-padding layout-padding layout-sm="column">
+
+        <md-input-container flex="40">
         <label>Email</label>
         <input ng-model="user.email" type="email" required>
     </md-input-container>
+
     <md-input-container flex="40">
         <label>Password</label>
         <input ng-model="user.password" type="password" required>
     </md-input-container>
-    <span ng-if="loginErrorMessage">Login Error</span>
+
+        <div ng-if="loginErrorMessage" style="color: red">{{loginErrorMessage}}</div>
     <md-button type="submit" class="md-button md-raised md-primary">login</md-button>
 
 </md-content>
