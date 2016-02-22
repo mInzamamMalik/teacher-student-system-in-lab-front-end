@@ -1,4 +1,4 @@
-angular.module("myApp",["ngMaterial","ui.router"])
+angular.module("myApp",["ngMaterial","ui.router","ngMdIcons"])
 
    .config(function($stateProvider,$urlRouterProvider){
        $urlRouterProvider.otherwise("/");

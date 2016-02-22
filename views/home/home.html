@@ -13,4 +13,38 @@
                    flex="20">
                 Studentlogin
         </md-button>
+
+<!--
+I wrote this directive that works in CHrome/Safari/Firefox:
+
+ angular.module('app', ['ngMaterial'])
+ .directive('chooseFileButton', function() {
+  return {
+    restrict: 'A',
+    link: function (scope, elem, attrs) {
+        elem.bind('click', function() {
+              angular.element(document.querySelector('#' + attrs.chooseFileButton))[0].click();
+              });
+            }
+      };
+    });
+and html:
+
+<md-button choose-file-button="file-input" aria-label="xxx"
+            class="md-fab" ng-click="">
+    <md-icon md-svg-icon="photo.svg"></md-icon>
+ </md-button>
+
+  <input id="file-input" type="file">
+http://plnkr.co/edit/5blQ8fJIhJV0hYM96PB2?p=preview
+-->
+        <md-button class="md-padding">
+                <label for="fileToUpload">
+                        <ng-md-icon icon=" file_upload"  type="file"></ng-md-icon>
+
+                        <input id="#fileToUpload" type="file" style="  ">
+                </label>
+        </md-button>
+
+
 </div>
